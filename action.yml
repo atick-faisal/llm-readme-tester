@@ -1,0 +1,24 @@
+name: "LLM README Tester"
+description: "Use an LLM (Gemini) to evaluate your README.md file quality via unit tests."
+inputs:
+  google_api_key:
+    description: "Your Google Gemini API key"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: pip install -r ${{ github.action_path }}/requirements.txt
+      shell: bash
+
+    - name: Run README Tests
+      run: pytest ${{ github.action_path }}/test_readme.py
+      shell: bash
+      env:
+        GOOGLE_API_KEY: ${{ inputs.google_api_key }}

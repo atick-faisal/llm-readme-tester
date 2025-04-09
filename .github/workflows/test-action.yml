@@ -1,0 +1,16 @@
+name: Test the Action
+
+on:
+  push:
+    paths:
+      - README.md
+      - test_readme.py
+
+jobs:
+  test-readme:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ./
+      with:
+        google_api_key: ${{ secrets.GOOGLE_API_KEY }}
