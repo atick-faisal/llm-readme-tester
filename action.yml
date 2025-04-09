@@ -1,5 +1,8 @@
 name: "LLM README Tester"
 description: "Use an LLM (Gemini) to evaluate your README.md file quality via unit tests."
+branding:
+  icon: book-open
+  color: purple
 inputs:
   google_api_key:
     description: "Your Google Gemini API key"
