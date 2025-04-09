@@ -38,7 +38,7 @@ This GitHub Action runs *LLM-powered unit tests* on your `README.md` file using 
 Drop this into your workflow to automatically test every README change:
 
 ```yaml
-- uses: atick-faisal/llm-readme-tester@v1.0.0
+- uses: atick-faisal/llm-readme-tester@v1
   with:
     google_api_key: ${{ secrets.GOOGLE_API_KEY }}
 ```
