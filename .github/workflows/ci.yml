@@ -47,3 +47,25 @@ jobs:
 
       - name: 🧪 Run Pytest Suite
         run: uv run pytest
+
+  readme:
+    name: 📄 README Quality Check
+    needs: lint
+    runs-on: ubuntu-latest
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+
+    steps:
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 📦 Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.13"
+
+      - name: 📥 Install Runtime Dependencies
+        run: uv sync
+
+      - name: 📄 Run LLM README Test (on this repo)
+        run: uv run pytest test_readme.py
