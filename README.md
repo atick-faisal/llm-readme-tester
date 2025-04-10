@@ -61,6 +61,13 @@ test_readme.py ....F                                                     [100%]
 FAILED test_readme.py::test_license_info - ❌ License information is missing.
 ```
 
+## 📚 Docs & Community
+
+- 🤝 [Contributing Guide](./CONTRIBUTING.md)
+- ✨ [Code of Conduct](./CODE_OF_CONDUCT.md)
+- 🧪 [Test Case Discussion](https://github.com/atick-faisal/llm-readme-tester/discussions)  
+  _Suggest new checks, vote on ideas, and bring the README police to life_
+
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <p align="center">
