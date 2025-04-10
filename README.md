@@ -1,5 +1,3 @@
-# ⚡ LLM README Tester
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/atick-faisal/llm-readme-tester/main/assets/banner.jpg" alt="LLM README Tester Banner"/>
 </p>
