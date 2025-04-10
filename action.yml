@@ -21,17 +21,13 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: 🐍 Set up Python
-      uses: actions/setup-python@v4
+    - name: 📦 Install uv
+      uses: astral-sh/setup-uv@v5
       with:
-        python-version: '3.13'
-
-    - name: ⚡ Install dependencies with uv
-      run: uv sync
-      shell: bash
+        python-version: "3.13"
 
     - name: 🧪 Run LLM-powered README tests
-      run: pytest test_readme.py
+      run: uv run pytest
       shell: bash
       env:
         GOOGLE_API_KEY: ${{ inputs.google_api_key }}
