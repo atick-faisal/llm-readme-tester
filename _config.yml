@@ -1,0 +1,48 @@
+title: LLM README Tester
+author:
+  name: Atick Faisal
+  email: atickfaisal@gmail.com
+
+description: Run LLM-powered unit tests on your README.md using a GitHub Action powered by Gemini AI.
+
+theme: minima
+
+minima:
+  skin: auto
+  social_links:
+    - title: GitHub
+      icon: github
+      url: "https://github.com/atick-faisal"
+    - title: Google Scholar
+      icon: google-scholar
+      url: "https://scholar.google.com/citations?user=ZiPKjAgAAAAJ&hl=en"
+    - title: Portfolio
+      icon: globe
+      url: "https://atick.dev"
+    - title: Project
+      icon: code
+      url: "https://github.com/atick-faisal/llm-readme-tester"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Site settings
+baseurl: "/llm-readme-tester"
+url: "https://atick-faisal.github.io"
+
+# Exclude stuff we don’t want Jekyll to touch
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - test_readme.py
+  - action.yml
+  - .github
