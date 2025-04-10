@@ -12,7 +12,7 @@
     <a href="https://github.com/atick-faisal/llm-readme-tester/contributors">
         <img src="https://img.shields.io/github/contributors/atick-faisal/llm-readme-tester?colorA=363a4f&colorB=a6da95&style=for-the-badge">
     </a>
-    <img src="https://img.shields.io/github/actions/workflow/status/atick-faisal/llm-readme-tester/test-action.yml?style=for-the-badge&logo=python&label=tests&colorB=91d7e3&colorA=363a4f" />
+    <img src="https://img.shields.io/github/actions/workflow/status/atick-faisal/llm-readme-tester/ci.yml?style=for-the-badge&logo=python&label=tests&colorB=91d7e3&colorA=363a4f" />
 </p>
 
 💡 **Turn your README into tested code.**  
