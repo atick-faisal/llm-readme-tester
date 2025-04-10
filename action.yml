@@ -1,32 +1,38 @@
 name: "⚡ LLM README Tester"
 description: "LLM-powered unit tests for your README.md — powered by Gemini AI and pure vibes."
 
-# 🪞 How it shows up in the GitHub Marketplace
 branding:
   icon: book-open
   color: purple
 
-# 🔐 Required inputs
 inputs:
   google_api_key:
     description: "Your Google Gemini API key (store it as a secret: GOOGLE_API_KEY)"
     required: true
 
-# 🔧 What this Action actually does
+  checks:
+    description: >
+      Comma-separated list of checks to run on your README.
+      Options: description, install, usage, license, demo.
+      Use "all" to run all checks (default).
+    required: false
+    default: "all"
+
 runs:
   using: "composite"
   steps:
     - name: 🐍 Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: '3.13'
 
-    - name: 📦 Install dependencies
-      run: pip install -r ${{ github.action_path }}/requirements.txt
+    - name: ⚡ Install dependencies with uv
+      run: uv sync
       shell: bash
 
     - name: 🧪 Run LLM-powered README tests
-      run: pytest ${{ github.action_path }}/test_readme.py
+      run: pytest test_readme.py
       shell: bash
       env:
         GOOGLE_API_KEY: ${{ inputs.google_api_key }}
+        README_TEST_CHECKS: ${{ inputs.checks }}
