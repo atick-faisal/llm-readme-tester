@@ -93,7 +93,9 @@ def pytest_generate_tests(metafunc) -> None:
                 key.strip() for key in check_input.split(",") if key.strip() in AVAILABLE_CHECKS
             ]
 
-        metafunc.parametrize("check_key", selected_keys)
+        ids = [AVAILABLE_CHECKS[key][0] for key in selected_keys]
+
+        metafunc.parametrize("check_key", selected_keys, ids=ids)
 
 
 # 🧪 The unified test function
