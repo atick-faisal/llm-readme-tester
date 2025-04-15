@@ -26,6 +26,10 @@ runs:
       with:
         python-version: "3.13"
 
+    - name: 📥 Install Runtime Dependencies
+      run: uv sync
+      shell: bash
+
     - name: 🧪 Run LLM-powered README tests
       run: uv run pytest
       shell: bash
