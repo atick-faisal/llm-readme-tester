@@ -78,6 +78,6 @@ FAILED test_readme.py::test_license_info - ❌ License information is missing.
 
 <p align="center">
   <a href="https://github.com/atick-faisal/llm-readme-tester/blob/main/LICENSE">
-    <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=Apache 2.0&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/>
+    <img src="https://img.shields.io/github/license/atick-faisal/llm-readme-tester?style=for-the-badge&colorA=363a4f&colorB=b7bdf8"/>
   </a>
 </p>
