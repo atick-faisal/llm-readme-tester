@@ -24,7 +24,7 @@ jobs:
         run: uv sync --all-extras --dev
 
       - name: 🧐 Run Ruff Linter (on action code only)
-        run: ruff check
+        run: uv run ruff check
 
   test:
     name: 🧪 Run All Tests
