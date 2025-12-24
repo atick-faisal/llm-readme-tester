@@ -76,7 +76,7 @@ def ask_llm(readme: str, question: str) -> str:
         {question}
     """
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         contents=prompt,
     )
     return response.text.strip().lower()
